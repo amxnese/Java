@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class ArraysExample {
@@ -34,6 +33,6 @@ public class ArraysExample {
         // Or We Can Just Use deepToString() method
         System.out.println(Arrays.deepToString(arr)); // [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
-        
+
     }
 }
