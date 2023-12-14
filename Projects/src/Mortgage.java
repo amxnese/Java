@@ -13,20 +13,27 @@ public class Mortgage {
         String mortgageFormated;
 
         // Getting Inputs
-        do{
-            System.out.print("Enter Principal: ");
+        System.out.print("Enter Principal: ");
+        principal = scanner.nextInt();
+        while(principal < 1000 || principal > 1000000){
+            System.out.print("Enter a Number Between 1000 and 1000000: ");
             principal = scanner.nextInt();
-        }while(principal < 0);
+        }
         
-        do{
-            System.out.print("Enter Period: ");
+        System.out.print("Enter Period: ");
+        years = scanner.nextInt();
+        while (years <= 0){
+            System.out.println("Enter a Positive Number: ");
             years = scanner.nextInt();
-        }while (years < 0);
+        }
 
-        do{
-            System.out.print("Enter Annual Interest Rate: ");
+        System.out.print("Enter Annual Interest Rate: ");
+        interest = scanner.nextFloat();
+        
+        while (interest < 1 || interest > 30){
+            System.out.println("Enter a Number Between 1 and 30:  ");
             interest = scanner.nextFloat();
-        }while (interest < 0);
+        }
 
         // Breaknig Down Some Concepts
         monthly_interest = interest / MONTHS_IN_YEAR / PERCENT;
