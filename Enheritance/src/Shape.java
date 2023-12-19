@@ -1,7 +1,9 @@
 // Parent Class
 public class Shape {
-    String color;
-    boolean filled;
+
+    // Class Attributes
+    private String color;
+    private boolean filled;
 
     // Regular Constuctor
     Shape(){
@@ -34,6 +36,7 @@ public class Shape {
     }
 
     // Overriding The toString() built in Function
+    
     @Override
     public String toString(){
         String filled;
@@ -74,54 +77,67 @@ public class Shape {
 
 // Child Class
 class Circle extends Shape{
-    double radius;
+    private double radius;
+
     Circle(){}
+    
     Circle(String color, boolean filled , double radius){
         // Using super Method to Construct color and filled by The Parent Class
         super(color,filled);
         this.radius = radius; 
     }
+
     double getRadius(){
         return this.radius;
     }
+
     void setRadius(double newRadius){
         this.radius = newRadius;
     }
+    
     @Override
     public String toString(){
         String state;
         if(this.isFilled()){
             state = "Filled";
         }else{state = "not Filled";}
-        return "this circle is " + this.color + " and " + state + " and its radius is " + this.radius;
+        return "this circle is " + this.getColor() + " and " + state + " and its radius is " + this.getRadius();
     }
 }
 class Rectangle extends Shape{
-    double width, length;
+    private double width;
+    private double length;
+
     Rectangle(){}
+
     Rectangle(String color ,boolean filled, double width,double length){
         super(color,filled);
         this.width = width;
         this.length = length;
     }
+
     double getWidth(){
         return this.width;
     }
+
     double getLength(){
         return this.length;
     }
+
     void setWidth(double width){
         this.width = width;
     }
+
     void setLength(double newLength){
         this.length = newLength;
     }
+    
     @Override
     public String toString(){
         String temp;
         if(this.isFilled()){
             temp = "Filled";
         }else{temp = "not Filled";}
-        return "this rectangle is " + this.color + " and " + temp + ", its width is: " + this.width + " and its length is: " + this.length;
+        return "this rectangle is " + this.getColor() + " and " + temp + ", its width is: " + this.getWidth() + " and its length is: " + this.getLength();
     }
 }
