@@ -6,6 +6,7 @@ public class PasswordValidator {
 
         System.out.print("Enter a password: ");
         String password = scanner.nextLine();
+        scanner.close();
 
         if (isValidPassword(password)) {
             System.out.println("Valid Password!");

@@ -3,7 +3,7 @@ public class Circle {
     private double radius;
 
     // Constructor
-    public Circle(double radius) {
+    Circle(double radius) {
         this.radius = radius;
     }
 
@@ -23,7 +23,6 @@ public class Circle {
     }
 
     public static void main(String[] args) {
-      
         Circle circle1 = new Circle(25);
 
         // Display information for each circle
