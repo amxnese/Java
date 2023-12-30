@@ -32,14 +32,18 @@ class BankAccount {
         return balance;
     }
 
+    public String getAccountNumber(){
+        return accountNumber;
+    }
+
     private String generateAccountNumber(){
         Random random = new Random();
         return String.format("%08d", random.nextInt(100000000));
     }
 
     public static void main(String[] args) {
-      SavingsAccount account = new SavingsAccount(200);
-      
+        SavingsAccount account = new SavingsAccount(200);
+        
         account.deposit(400);
         account.withdraw(300);
         account.withdraw(250);  // after this withdrawal the balance will be less than 100
