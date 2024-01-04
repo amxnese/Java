@@ -20,13 +20,13 @@ public class Worker {
     }
 
     public static void main(String[] args) {
-        SalariedEmployee ahmed = new SalariedEmployee("Ahmed",62,"HR", 800);
+        SalariedEmployee ahmed = new SalariedEmployee("Ahmed",62,"crazy 8", 800);
         System.out.println(ahmed.monthlyPaid(36));
         ahmed.information();
         ahmed.perform();
 
         System.out.println("**********************************************");
-        HourlyEmployee aymen = new HourlyEmployee("Aymen", 54, "cashier",20,12.3);
+        HourlyEmployee aymen = new HourlyEmployee("Aymen", 54, "T bag",20,12.3);
         System.out.println(aymen.weeklyPay());
         aymen.information();
         aymen.perform();
