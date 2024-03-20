@@ -24,9 +24,9 @@ static void tune(Instrument i){
 }
 
 static void tuneAll(Instrument[] i){
-   for(int n=0; n < i.length ;n++){
+  for(int n=0; n < i.length ;n++){
     i[n].play();
-   }
+  }
 }
 }
 
